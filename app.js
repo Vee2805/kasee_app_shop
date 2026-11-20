@@ -359,10 +359,88 @@ function setupCharts() {
   });
 }
 
+// 7. HERO SLIDESHOW CONTROLLER
+function setupHeroSlideshow() {
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".slide-dots .dot");
+  const prevBtn = document.getElementById("prevSlideBtn");
+  const nextBtn = document.getElementById("nextSlideBtn");
+  const wrapper = document.querySelector(".slideshow-wrapper");
+  
+  if (!slides.length) return;
+  
+  let currentSlide = 0;
+  let autoTimer = null;
+
+  function showSlide(index) {
+    slides.forEach((s, i) => {
+      s.classList.toggle("active", i === index);
+    });
+    dots.forEach((d, i) => {
+      d.classList.toggle("active", i === index);
+    });
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    let nextIndex = (currentSlide + 1) % slides.length;
+    showSlide(nextIndex);
+  }
+
+  function prevSlide() {
+    let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prevIndex);
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoTimer = setInterval(nextSlide, 4500);
+  }
+
+  function stopAutoPlay() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      startAutoPlay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      startAutoPlay();
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const idx = parseInt(dot.dataset.index);
+      showSlide(idx);
+      startAutoPlay();
+    });
+  });
+
+  if (wrapper) {
+    wrapper.addEventListener("mouseenter", stopAutoPlay);
+    wrapper.addEventListener("mouseleave", startAutoPlay);
+  }
+
+  // Start initial auto play
+  startAutoPlay();
+}
+
 // INITIALIZATION
 document.addEventListener("DOMContentLoaded", () => {
   renderDebtors(DEBTORS_DATA);
   renderProducts(PRODUCTS_DATA);
   setupCharts();
   updateSimulator(10);
+  setupHeroSlideshow();
 });
+

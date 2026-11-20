@@ -37,18 +37,91 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION WITH SLIDESHOW & HUMANIZED STORY -->
   <section class="hero" id="hero">
-    <div class="hero-content">
-      <div class="hero-pill">DSA 8402 Capstone Consultancy — Client: John Nzioka</div>
-      <h1 class="hero-title">Optimizing Working Capital, Product Mix & Credit Risk</h1>
-      <p class="hero-subtitle">
-        Empirical evidence from 23 months of operations (2,188 transactions) transformed into an interactive decision aid to stabilize monthly net cash flow for Kasee Shop, Thika.
-      </p>
-      <div class="hero-meta">
-        <span class="meta-item"><strong>Student Consultant:</strong> Daniel Vaati (Reg: 221570)</span>
-        <span class="meta-item"><strong>Location:</strong> Commercial Center, Thika, Kenya</span>
-        <span class="meta-item"><strong>Status:</strong> Validated & Operational</span>
+    <div class="hero-container">
+      <div class="hero-left">
+        <div class="hero-pill">
+          <span class="pill-dot"></span>
+          <span>Karibu Kasee Shop • Thika Commercial Center</span>
+        </div>
+        <h1 class="hero-title">Smart Decisions for Real Kenyan Retail</h1>
+        <p class="hero-subtitle">
+          Built hand-in-hand with shop owner <strong>Mr. John Nzioka</strong>. We took 23 months of sales data and transformed them into simple, daily decision rules to stop credit leakage and protect weekly shop cash flow.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#simulator-section" class="hero-btn primary-btn">⚡ Try Stock Mix Simulator</a>
+          <a href="#credit-section" class="hero-btn secondary-btn">📋 Check Credit Limits</a>
+        </div>
+
+        <div class="hero-owner-card">
+          <div class="owner-avatar">JN</div>
+          <div class="owner-info">
+            <span class="owner-name">John Nzioka — Proprietor, Kasee Shop</span>
+            <p class="owner-quote">"This system took our numbers and gave us simple rules my counter staff can actually use every day without guessing."</p>
+          </div>
+        </div>
+
+        <div class="hero-meta">
+          <span class="meta-item"><strong>Consultant:</strong> Daniel Vaati (Reg: 221570)</span>
+          <span class="meta-item"><strong>Location:</strong> Thika, Kiambu County</span>
+          <span class="meta-item"><strong>Hours:</strong> Mon–Sat: 7:00 AM – 9:30 PM</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="slideshow-wrapper">
+          <div class="slideshow-track" id="heroSlideshow">
+            <div class="slide active">
+              <img src="public/images/slide1.png" alt="Vibrant Beverage and Fresh Produce Assortment" class="slide-img">
+              <div class="slide-caption">
+                <span class="slide-tag">STRATEGIC OPPORTUNITY</span>
+                <h3>High-Margin Fresh Produce & Beverages</h3>
+                <p>Reallocating 10% of distributor capital into tomatoes, onions, and water refills.</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="public/images/slide2.png" alt="Kenafric Beverages Refreshment Collage" class="slide-img">
+              <div class="slide-caption">
+                <span class="slide-tag">WHOLESALE DISTRIBUTOR LINE</span>
+                <h3>Kenafric & Soft Drinks Crate Turnover</h3>
+                <p>Fast-moving inventory keeping foot traffic high in Thika Commercial Center.</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="public/images/slide3.png" alt="Steam Energy Cans and Fresh Avocado" class="slide-img">
+              <div class="slide-caption">
+                <span class="slide-tag">THE 12% VS 23.7% MARGIN GAP</span>
+                <h3>Energy Drinks vs Farm-Fresh Avocados</h3>
+                <p>Balancing canned goods with zero-shelf-life risks against high-margin produce.</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="public/images/slide4.png" alt="Electric Blue Steam Energy Drink Ad" class="slide-img">
+              <div class="slide-caption">
+                <span class="slide-tag">VOLUME ANCHOR</span>
+                <h3>Steam 400ml Energy Drink Lineup</h3>
+                <p>Accounting for 53.4% of total shop turnover; managed with disciplined restocking caps.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button class="slide-arrow prev-btn" id="prevSlideBtn" aria-label="Previous Slide">&#10094;</button>
+          <button class="slide-arrow next-btn" id="nextSlideBtn" aria-label="Next Slide">&#10095;</button>
+
+          <!-- Dots Indicator -->
+          <div class="slide-dots" id="slideDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
