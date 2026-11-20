@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasee Shop | Analytics & Decision Support Portal</title>
+  <meta name="description" content="Operational Decision Support System and Analytics Portal for Kasee Shop, Thika. DSA 8402 Capstone Consultancy by Daniel Vaati.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">🏪</div>
+        <div class="brand-text">
+          <span class="brand-name">KASEE SHOP</span>
+          <span class="brand-sub">Decision Support & Analytics Portal</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#kpi-section" class="nav-link active">Overview</a>
+        <a href="#simulator-section" class="nav-link">Mix Simulator</a>
+        <a href="#credit-section" class="nav-link">Credit Matrix</a>
+        <a href="#catalog-section" class="nav-link">Product Catalog</a>
+        <a href="#charts-section" class="nav-link">Visual Evidence</a>
+        <a href="#downloads-section" class="nav-link">Deliverables</a>
+      </nav>
+      <div class="nav-badge">
+        <span class="status-indicator"></span>
+        <span>Thika MSME Live System</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-pill">DSA 8402 Capstone Consultancy — Client: John Nzioka</div>
+      <h1 class="hero-title">Optimizing Working Capital, Product Mix & Credit Risk</h1>
+      <p class="hero-subtitle">
+        Empirical evidence from 23 months of operations (2,188 transactions) transformed into an interactive decision aid to stabilize monthly net cash flow for Kasee Shop, Thika.
+      </p>
+      <div class="hero-meta">
+        <span class="meta-item"><strong>Student Consultant:</strong> Daniel Vaati (Reg: 221570)</span>
+        <span class="meta-item"><strong>Location:</strong> Commercial Center, Thika, Kenya</span>
+        <span class="meta-item"><strong>Status:</strong> Validated & Operational</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI SUMMARY SECTION -->
+  <section class="section kpi-section" id="kpi-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">BASELINE DIAGNOSTIC</span>
+        <h2>23-Month Operational Ledger Performance</h2>
+        <p>Mathematical reconciliation from January 2025 to November 2026 across 2,188 customer sales transactions.</p>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon revenue-icon">💰</div>
+          <div class="kpi-value" id="kpi-revenue">KES 1,012,123</div>
+          <div class="kpi-label">Gross Sales Turnover</div>
+          <div class="kpi-desc">2,188 sales transactions (Avg KES 44,005/month)</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon profit-icon">📈</div>
+          <div class="kpi-value" id="kpi-margin">13.0%</div>
+          <div class="kpi-label">Gross Profit Margin</div>
+          <div class="kpi-desc">KES 131,449 gross profit retained (KES 5,715/month)</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon cash-icon">⚖️</div>
+          <div class="kpi-value" id="kpi-cash">3.8× Variance</div>
+          <div class="kpi-label">Cash Flow Volatility</div>
+          <div class="kpi-desc">Monthly swings from KES 10,048 to KES 38,538</div>
+        </div>
+
+        <div class="kpi-card highlight-danger">
+          <div class="kpi-icon debt-icon">⚠️</div>
+          <div class="kpi-value" id="kpi-credit">KES 34,731</div>
+          <div class="kpi-label">Trapped Customer Credit</div>
+          <div class="kpi-desc">3.43% of total turnover locked across 12 institutions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE STOCK MIX SIMULATOR -->
+  <section class="section simulator-section" id="simulator-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">DECISION-SUPPORT TOOL 1</span>
+        <h2>Stock Mix Reallocation Simulator</h2>
+        <p>Test shifting working capital from low-margin energy drinks into high-margin produce and clean water refills.</p>
+      </div>
+
+      <div class="simulator-wrapper">
+        <div class="simulator-controls">
+          <div class="control-group">
+            <div class="slider-header">
+              <label for="shiftSlider"><strong>Capital Reallocation Shift:</strong></label>
+              <span class="slider-display" id="shiftPercentDisplay">10% Trial (Recommended)</span>
+            </div>
+            <input type="range" id="shiftSlider" min="0" max="25" step="1" value="10" class="custom-slider">
+            <div class="slider-markers">
+              <span>0% (Status Quo)</span>
+              <span>10% (Client Agreed Trial)</span>
+              <span>20% (Target 90-Day)</span>
+              <span>25% (Theoretical Max)</span>
+            </div>
+          </div>
+
+          <div class="client-alert-box">
+            <div class="alert-icon">🛡️</div>
+            <div class="alert-text">
+              <strong>Client Pushback Guardrail (John Nzioka):</strong>
+              <em>"Tomatoes spoil in 48 hours; energy cans last 9 months."</em> In response to this touchpoint challenge, the 10% trial focuses strictly on low-perishability staple produce (onions, dry garlic) and <strong>20L water bottle refills</strong> (0% spoilage).
+            </div>
+          </div>
+        </div>
+
+        <div class="simulator-results">
+          <div class="result-tile">
+            <span class="result-label">Reallocated Monthly Capital</span>
+            <span class="result-value" id="res-shifted-capital">KES 5,409 / mo</span>
+            <span class="result-sub">Subtracted from energy drink distributor orders</span>
+          </div>
+
+          <div class="result-tile highlight-success">
+            <span class="result-label">Extra Monthly Net Profit</span>
+            <span class="result-value" id="res-monthly-gain">+KES 232.42 / mo</span>
+            <span class="result-sub">Direct bottom-line expansion with zero extra cash</span>
+          </div>
+
+          <div class="result-tile">
+            <span class="result-label">Projected Annual Profit Gain</span>
+            <span class="result-value" id="res-annual-gain">+KES 2,789.04 / yr</span>
+            <span class="result-sub">Compound working capital expansion</span>
+          </div>
+
+          <div class="result-tile">
+            <span class="result-label">Combined with Credit Recovery</span>
+            <span class="result-value" id="res-total-liquidity">+KES 2,258.42 / mo</span>
+            <span class="result-sub">Including KES 2,026/mo from debtor collections</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE CREDIT RISK & DEBTOR MATRIX -->
+  <section class="section credit-section" id="credit-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">DECISION-SUPPORT TOOL 2</span>
+        <h2>Debtor Risk Matrix & Till Credit Limits</h2>
+        <p>Real-time debtor monitoring across all 12 institutional and commercial accounts in Thika.</p>
+      </div>
+
+      <div class="credit-filter-bar">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All Accounts (12)</button>
+          <button class="filter-btn" data-filter="over">Over Limit / Action Required (5)</button>
+          <button class="filter-btn" data-filter="institution">Universities & Colleges (4)</button>
+          <button class="filter-btn" data-filter="church">Churches (2)</button>
+        </div>
+        <div class="search-box">
+          <input type="text" id="debtorSearch" placeholder="Search customer or institution...">
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="data-table" id="debtorTable">
+          <thead>
+            <tr>
+              <th>Customer / Institution</th>
+              <th>Customer Type</th>
+              <th>Outstanding Debt</th>
+              <th>Agreed Credit Limit</th>
+              <th>Status</th>
+              <th>Operational Action</th>
+            </tr>
+          </thead>
+          <tbody id="debtorTableBody">
+            <!-- Populated dynamically via app.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="credit-golden-rule">
+        <div class="rule-badge">KANUNI YA MKOPO (THE GOLDEN RULE)</div>
+        <p><strong>"If an institutional or retail customer exceeds their limit, they MUST clear their previous invoice balance before any new goods are released on credit."</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CATALOG WITH IMAGES & MARGIN MATRIX -->
+  <section class="section catalog-section" id="catalog-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">LIVE PRODUCT INVENTORY</span>
+        <h2>Product Margin Matrix & Opportunity Showcase</h2>
+        <p>Visualizing why high-margin categories (fresh produce & water refills) outperform volume-heavy energy drinks.</p>
+      </div>
+
+      <div class="catalog-filters">
+        <button class="cat-btn active" data-cat="all">All Categories</button>
+        <button class="cat-btn" data-cat="Energy Drink">Energy Drinks (12% Margin)</button>
+        <button class="cat-btn" data-cat="Fresh Produce">Fresh Produce (23.7% Margin)</button>
+        <button class="cat-btn" data-cat="Water Refill">Water Refills (20.0% Margin)</button>
+        <button class="cat-btn" data-cat="Soft Drinks">Soft Drinks & Juices</button>
+        <button class="cat-btn" data-cat="Grocery">Groceries & Bakery</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Populated dynamically with generated images in app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALYTICAL EVIDENCE GALLERY (10 CHARTS) -->
+  <section class="section charts-section" id="charts-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">EMPIRICAL PROOF</span>
+        <h2>Analytical Evidence & Sensitivity Visuals</h2>
+        <p>Click on any of the 10 capstone visual exhibits to inspect full-resolution findings.</p>
+      </div>
+
+      <div class="chart-selector" id="chartSelector">
+        <!-- Buttons populated via JS -->
+      </div>
+
+      <div class="chart-display-card">
+        <div class="chart-image-wrap">
+          <img id="activeChartImg" src="public/charts/01_revenue_vs_margin_by_category.png" alt="Active Chart">
+        </div>
+        <div class="chart-details">
+          <h3 id="activeChartTitle">Figure 1: Revenue Share vs Gross Margin by Category</h3>
+          <p id="activeChartDesc">Energy drinks dominate revenue at 53.4% but produce only 11.96% margin, while Fresh Produce yields 23.68% and Water yields 20.0%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES DOWNLOAD HUB -->
+  <section class="section downloads-section" id="downloads-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">OFFICIAL PACKAGES</span>
+        <h2>Official Capstone Deliverables Download Hub</h2>
+        <p>Access the formal peer-reviewed PDFs, spreadsheet decision aids, and presentation slide deck.</p>
+      </div>
+
+      <div class="downloads-grid">
+        <div class="download-card">
+          <div class="dl-badge">ACADEMIC MASTER</div>
+          <h3>Capstone Consultancy Report</h3>
+          <p>19-Page comprehensive LaTeX academic document covering all 8 chapters, methodology, and appendices.</p>
+          <a href="public/docs/Capstone_Report_Daniel_Vaati_221570.pdf" download class="dl-btn primary">Download PDF (1.3 MB)</a>
+        </div>
+
+        <div class="download-card">
+          <div class="dl-badge">CLIENT BRIEF</div>
+          <h3>Owner Briefing</h3>
+          <p>2-Page plain-language executive summary prepared for shop owner Mr. John Nzioka.</p>
+          <a href="public/docs/Owner_Briefing_Kasee_Shop.pdf" download class="dl-btn secondary">Download PDF (193 KB)</a>
+        </div>
+
+        <div class="download-card">
+          <div class="dl-badge">STAFF GUIDE</div>
+          <h3>Staff Action Guide</h3>
+          <p>1-Page counter laminate till card with approved customer credit limits and Swahili scripts.</p>
+          <a href="public/docs/Staff_Action_Guide_Kasee_Shop.pdf" download class="dl-btn secondary">Download PDF (145 KB)</a>
+        </div>
+
+        <div class="download-card">
+          <div class="dl-badge">EXCEL TOOL</div>
+          <h3>Interactive Decision Aid</h3>
+          <p>The 4-sheet operational spreadsheet handed over to Kasee Shop for weekly till tracking.</p>
+          <a href="public/docs/Kasee_Shop_Decision_Aid.xlsx" download class="dl-btn excel">Download Excel (.xlsx)</a>
+        </div>
+
+        <div class="download-card">
+          <div class="dl-badge">EXAM DECK</div>
+          <h3>Presentation Slides</h3>
+          <p>10-Slide 16:9 widescreen presentation deck prepared for the Capstone defense.</p>
+          <a href="public/docs/Presentation_Slides.pdf" download class="dl-btn secondary">Download Slides (815 KB)</a>
+        </div>
+
+        <div class="download-card">
+          <div class="dl-badge">RAW DATASET</div>
+          <h3>Historical Records Dataset</h3>
+          <p>23 Months of raw transactions, stock purchases, and product price lists.</p>
+          <a href="public/docs/Kasee_Shop_Records_Dataset.xlsx" download class="dl-btn excel">Download Dataset (.xlsx)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL FOR COLLECTION SCRIPTS -->
+  <div class="modal-backdrop" id="scriptModal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Customer Follow-Up Script</h3>
+        <button class="modal-close" id="modalCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-institution" id="modalInstName">Mount Kenya University</p>
+        <div class="script-box">
+          <h4>Swahili Counter / Phone Script (Lugha ya Kiswahili):</h4>
+          <p id="modalSwahiliScript">"Habari mteja, records zetu za Kasee Shop zinaonyesha salio la KES [X] ambalo limezidi kiwango chetu cha mkopo. Sera ya duka inataka tulipe salio la zamani kabla ya kutoa bidhaa nyingine. Je, mnaweza kutuma kiasi hicho kwa M-Pesa sasa hivi?"</p>
+        </div>
+        <div class="script-box">
+          <h4>English Procurement / Formal Script:</h4>
+          <p id="modalEnglishScript">"Hello, this is Kasee Shop calling regarding invoice balance KES [X]. Our account credit ceiling requires prior balances to be settled before new consignments are released. Kindly confirm invoice approval today."</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="copy-btn" id="copyScriptBtn">Copy Swahili Script</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p><strong>Kasee Shop Analytics & Decision Portal</strong> — Built for Mr. John Nzioka (Owner/Manager, Thika).</p>
+      <p>DSA 8402: Communication Strategies for Analysts Capstone Project | Daniel Vaati (Registration No. 221570)</p>
+      <p class="footer-sub">Compliant with Kenya Data Protection Act (2019) & Responsible Data Science Practice.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
